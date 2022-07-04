@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class Main{
+    static void add(int a,int b){
+        int sum=a+b;
+        System.out.println("The sum is "+sum);
+    }
+    static void sub(int a, int b){
+        int diff=a-b;
+        System.out.println("The difference is "+diff);
+    }
+    static void mul(int a, int b){
+    int prod=a*b;
+    System.out.println("The product is "+prod);
+    }
+    static void divi(int a, int b){
+        int div=a/b;
+        System.out.println("The dividend is "+div);
+    }
+    static void quot(int a, int b){
+        int quo=a%b;
+        System.out.println("The quotient is "+quo);
+    }
+    public static void main(String args[]){
+        
+        Scanner s1=new Scanner(System.in);
+        for(int i=0;i<100;i++){
+        System.out.println("Enter the sign +,-,*,/,%");
+        char sign=s1.next().charAt(0);
+        
+        
+        if(sign=='+'||sign=='-'||sign=='*'||sign=='/'||sign=='%'){
+            System.out.println("Enter the first number");
+        
+            int num1=s1.nextInt();
+            System.out.println("Enter the second number");
+            int num2=s1.nextInt();
+        switch(sign){
+        case '+':
+            add(num1,num2);
+            break;
+        case '-':
+            sub(num1,num2);
+            break;
+        case '*':
+            mul(num1,num2);
+            break;
+        case '/':
+            divi(num1,num2);
+            break;
+        case '%':
+            quot(num1,num2);    
+            break;
+        }
+        }
+        else{
+            System.out.println("Invalid sign");
+        }
+        }
+        }
+    
+}
